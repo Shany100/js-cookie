@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width" />
+		<title>cookie.js test</title>
+	</head>
+	<body>
+		<h1>cookie.js</h1>
+		<P>
+			cookie.js 提供了操作页面cookie的函数。
+		</P>
+		<P>
+			接口对象为 Seven。 通过 Seven.cookie() 进行操作。
+		</P>
+		<div style="border: 2px solid #e5e5e5;padding: 10px;">
+			<img src="cookie-screenshot.png" width="480" />
+			<p>
+				# 利用浏览器 "在新标签页中打开图片"，如 chrome。
+			</p>
+		</div>
+		
+		<script src="../cookie.js"></script>
+		<script>
+			Seven.cookie("username", "sina user");
+			
+			function consoleWrite(msg){
+				document.write("<pre> " + msg + "</pre>");
+			}
+			consoleWrite("输出测试信息，如下：");
+			consoleWrite(Seven.cookie("username"));
+			consoleWrite(document.cookie);
+		</script>
+	</body>
+</html>
